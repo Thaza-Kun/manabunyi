@@ -1,0 +1,36 @@
+[project]
+name = "manabunyi"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Thaza_Kun", email = "61819672+Thaza-Kun@users.noreply.github.com" }
+]
+dependencies = [
+    "scipy>=1.14.1",
+    "tqdm>=4.66.5",
+    "cartopy>=0.24.1",
+    "pillow>=11.0.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+"manabunyi" = "manabunyi:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "numpy>=2.1.2",
+    "matplotlib>=3.9.2",
+    "ipykernel>=6.29.5",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/manabunyi"]
